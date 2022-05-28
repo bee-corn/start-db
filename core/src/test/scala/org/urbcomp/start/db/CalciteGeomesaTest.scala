@@ -40,7 +40,7 @@ class CalciteGeomesaTest extends FunSuite with BeforeAndAfterAll {
   ignore("calcite geomesa test") {
     val connect = DriverManager.getConnection("jdbc:calcite:", config)
     val statement = connect.createStatement
-    val resultSet = statement.executeQuery("select * from test_table01 where age = 10")
+    val resultSet = statement.executeQuery("select * from citibike_tripdata")
     while (resultSet.next()) {
       assertNotNull(resultSet.getObject(1))
     }
